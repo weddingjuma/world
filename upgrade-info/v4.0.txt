@@ -1,0 +1,162 @@
+---------------READ ME------------------------------
+
+---------------FEATURES ADDED-----------------------
+- Added birth date option during sign up
+- Added privacy settings for who can see member birth date
+- Added change of birth date in user account settings
+-Added Facebook like bigPipe to make pages load more faster by turning each component on page to pagelets
+    -Added to user home - feeds page
+    -Added to user profile page
+    -Added to page profile page
+    -Added to all pages using the side widgets
+-Added ability for admin to update member password via admincp
+-Added SEO friendly meta data in to head
+-Added file sharing supported file types : exe,txt,zip,rar,php,doc,mp3,jpg,png,css,psd,pdf,ppt,pptx,xls,xlsx,html,docx,fla,avi,mp4 you can add or remove
+    -To add go to admincp -> configurations -> file
+    -Also you will have to put the file icon at themes/frontend/default/assets/images/extension_name.png
+    -note : change extension_name to the file type for example php.png
+-
+
+
+---------------BUGS FIXED---------------------------
+-Fixed issue with uploading of cover for communities
+-Fixed issue with not found pages to direct to custom error page
+-Solved issue with logout issue to set user offline
+-Fixed issue with search when using filter
+-Fixed issue with disabling page design
+-Fixed issue with video fullscreen play
+-Fixed issue with link preview not showing image
+-Fixed issue with videos upload
+    -Please this is server settings if you are having problem with upload
+    -in your php.ini settings set
+        -post_max_size = high value or set to 0 (zero) to leave it unlimited
+        -upload_max_filesize = high value
+-Fixed preview link size having issue on mobile
+-Fixed issue with activation of language via admin when it contains character like - _
+-Fixed issue with community sub-category not supporting other languages
+
+
+
+-------------- FILES TO BE ADDED -------------------
+
+app/config/months.php
+app/config/site/bigpipe.php
+app/config/site/file.php
+
+app/lang/en/month.php
+
+app/library/htmlawed/
+
+themes/admincp/default/assets/js/jquery-te.min.js
+
+themes/admincp/default/assets/css/jquery-te.css
+
+themes/admincp/default/assets/images/jquery-te.png
+
+themes/frontend/default/views/page/profile/timeline-widget.blade.php
+
+themes/frontend/default/views/profile/timeline-widget.blade.php
+
+themes/frontend/default/views/user/birthdate.blade.php
+themes/frontend/default/views/user/home/feeds.blade.php
+
+
+themes/frontend/default/assets/css/jquery-te.css
+
+themes/frontend/default/assets/images/jquery-te.png
+themes/frontend/default/assets/images/file-icons/ add all the images there
+
+
+themes/frontend/default/assets/js/pagelet.js
+themes/frontend/default/assets/js/jquery-te.min.js
+
+----------------------------------------------------
+--------------FILES TO UPDATE-----------------------
+
+workbench/idocrea8/theme/src/Idocrea8/Theme/Widget.php
+
+app/functions.php
+app/routes.php
+
+app/routes/post.php
+app/routes/admincp.php
+
+app/config/site/users.php
+
+app/Controllers/CommunityPageController.php
+app/Controllers/SignupController.php
+app/Controllers/UserHomeController.php
+app/Controllers/ProfileController.php
+app/Controllers/PageProfileController.php
+app/Controllers/LoginController.php
+app/Controllers/AccountController.php
+app/Controllers/CommunityPageController.php
+app/Controllers/PostController.php
+app/Controllers/BaseController.php
+
+---------------------------------------------------
+NOTE YOU DON'T NEED TO UPDATE THIS FILE COMPLETELY AT THE END OF THE FILE YOU WILL FIND NEW SECTION ADDED LABELLED VERSION 4.0
+
+app/lang/en/user.php
+app/lang/en/post.php
+
+---------------------------------------------------
+
+app/start/global.php
+
+app/Presenters/PostPresenter.php
+
+app/SetupDatabase/Install.php
+
+app/Repositories/UserRepository.php
+app/Repositories/CommunityCategoryRepository.php
+app/Repositories/MessageRepository.php
+app/Repositories/PageRepository.php
+app/Repositories/CommunityRepository.php
+app/Repositories/GameRepository.php
+
+
+themes/admincp/default/boot.php
+
+themes/admincp/default/views/user/edit.blade.php
+themes/admincp/default/assets/js/script.js
+
+
+themes/frontend/default/boot.php
+themes/frontend/default/assets/js/script.js
+
+themes/frontend/default/assets/css/style.css
+
+themes/frontend/default/views/community/page/edit.blade.php
+
+themes/frontend/default/views/connection/buttons.blade.php
+
+themes/frontend/default/views/layouts/header.blade.php
+
+themes/frontend/default/views/page/profile/index.blade.php
+themes/frontend/default/views/page/profile/side.blade.php
+
+themes/frontend/default/views/post/media.blade.php
+themes/frontend/default/views/post/auto-post/body.blade.php
+themes/frontend/default/views/post/editor/main.blade.php
+
+themes/frontend/default/views/profile/side-content.blade.php
+themes/frontend/default/views/profile/index.blade.php
+
+themes/frontend/default/views/home/index.blade.php
+
+/themes/frontend/default/views/search/people.blade.php
+/themes/frontend/default/views/search/communities.blade.php
+/themes/frontend/default/views/search/games.blade.php
+/themes/frontend/default/views/search/pages.blade.php
+
+themes/frontend/default/views/user/account/index.blade.php
+themes/frontend/default/views/user/account/privacy.blade.php
+themes/frontend/default/views/user/account/layout.blade.php
+
+-------------FINAL STEP TO COMPLETE THE UPGRADE STEP-
+
+LOGIN TO YOUR ADMINCP TO THE FOLLOWING
+
+-admincp -> update database
+-admincp -> configurations -> update configuration

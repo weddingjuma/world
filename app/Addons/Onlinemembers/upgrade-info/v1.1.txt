@@ -1,0 +1,7 @@
+------------------
+
+-Fix online members pagination
+
+------FILES TO UPDATE--------
+
+app/Addons/Onlinemembers/views/index.blade.php

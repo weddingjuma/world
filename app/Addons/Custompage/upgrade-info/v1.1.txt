@@ -1,0 +1,8 @@
+--------------CHANGES MADE------------------
+
+-Added the new editor to the custom page content editor
+
+-------------FILES TO UPDATE----------------
+
+app/Addons/Custompage/views/admincp/add.blade.php
+app/Addons/Custompage/views/admincp/edit.blade.php

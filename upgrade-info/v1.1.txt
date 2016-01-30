@@ -1,0 +1,67 @@
+----17/10/2014----
+--Fixed bug in change in username, only support alpha-numeric characters
+--files---
+-app/repositories/UserRepository.php
+
+--Remove the caret button on user profile,pages for non-login users
+
+---files---
+themes/frontend/default/views/profile/layout.blade.php
+themes/frontend/default/views/page/layout.blade.php
+--------
+--Added the remove string to english global file translation
+
+--files---
+app/lang/en/global.php
+
+----Corrected bug in installation process, mysql is deprecated so  i changed to mysqli
+--files----
+app/install/InstallRepository.php
+
+--corrected update check for notifications,  new post and friend request
+--files
+themes/frontend/default/assets/js/script.js
+--Fix bug in adding photos to albums
+
+---files---
+app/controllers/PhotoController.php
+
+--Turn links in comment to be clickable
+
+--files---
+app/presenters/CommentPresenter.php
+
+--Fixed bug in chat speed which set to 5minutes
+app/config/site/message.php
+
+--Convert html codes in user post to special characters this prevent your member from spoiling your site layout
+
+app/presenters/PostPresenter.php
+app/repositories/UserRepository
+app/repositories/pageRepository
+app/repositories/messageRepository
+app/repositories/communityRepository
+
+--Added ability to add images in Private message
+
+--files--
+themes/frontend/default/views/messages/message.blade.php
+themes/frontend/default/views/messages/display.blade.php
+app/controllers/MessageController.php
+app/repositories/MessageRepository.php
+
+
+--Added ability to edit post
+
+--files--
+themes/frontend/default/views/post/media.blade.php
+themes/frontend/default/views/post/headers/user.blade.php
+themes/frontend/default/views/post/headers/page.blade.php
+themes/frontend/default/views/post/headers/community.blade.php
+themes/frontend/default/assets/css/style.css
+app/lang/en/post.php
+app/setupDatabase/Install.php
+app/routes/post.php
+app/repositories/postRepository
+
+

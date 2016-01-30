@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# This deploy hook gets executed after dependencies are resolved and the
+# build hook has been run but before the application has been started back
+# up again.  This script gets executed directly, so it could be python, php,
+# ruby, etc.
+
+unset GIT_DIR;
+
+# Link the vendor directory from the build dependancies into the repo
+ln -s ${OPENSHIFT_BUILD_DEPENDENCIES_DIR}laravel/vendor/ ${OPENSHIFT_REPO_DIR}
+
+echo "[DEPLOY] Copying DB configs from .openshift/config/"
+cp -rf $OPENSHIFT_REPO_DIR/.openshift/misc/config/* ${OPENSHIFT_REPO_DIR}app/config/ 2>/dev/null
+
+# Check to see if we have an artisan file in .openshift/markers
+if [ -f "$OPENSHIFT_REPO_DIR.openshift/markers/artisan" ]; then
+
+  # Change directory into the repo 
+  cd $OPENSHIFT_REPO_DIR
+
+  # Pulling in the artisan file ( IT NEEDS A TRAILING LINE-BREAK IF IT'S ONLY ONE COMMAND!! )
+  exec < $OPENSHIFT_REPO_DIR.openshift/markers/artisan
+
+  # Loop over the artisan file and execute the commands
+  while read LINE; do
+      # the artisan file needs more than two lines to be looped over?
+      # if we have a blank line $LINE = '' and that ain't good
+      if [[ $LINE != '' ]];
+        then
+          echo "Running artisan command - '$LINE'"
+          # run the artisan command without interaction questions
+          php artisan $LINE
+      fi
+  done
+
+fi
+
+
+
+
+#!/bin/bash
+
+export MY_PHPCOMPOSER=$OPENSHIFT_DATA_DIR/composer.phar
+
+# if composer not exists, download
+if [ ! -f $MY_PHPCOMPOSER ]; then
+    cd $OPENSHIFT_DATA_DIR
+    echo "Downloading composer..."
+    php -r "readfile('https://getcomposer.org/installer');" | php 
+fi
+
+$MY_PHPCOMPOSER -n -q self-update
+cd $OPENSHIFT_REPO_DIR 
+# install
+php -dmemory_limit=1G $MY_PHPCOMPOSER install
+So post_deploy script will perform every time which you push your repo to openshit. It work like a charm!

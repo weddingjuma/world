@@ -1,0 +1,50 @@
+--------------CHANGES MADE-----------------
+
+-Fixed problem with logout to set user offline immediately
+-Added last login to admincp users list
+-Improved the setting of minimum age for new members by setting the maximum and minimum year in the birthdate year dropdown
+    -This can be control at admincp -> configurations -> user
+-Fixed images not showing in facebook share dialog box
+-Fixed edit comment showing to non-owner
+-Changed the format for time hover to e.g wednesday, january 16, 2015
+-Added support for cyrillic
+
+
+
+--------------HOW TO UPGRADE-----------------
+
+PLEASE NOTE : IF YOU HAVE NOT UPGRADE TO VERSION 4.1,
+YOU MUST UPGRADE TO VERSION 4.1 BEFORE UPGRADING TO VERSION 4.1.1 PLEASE SEE v4.1.txt ON HOW TO UPGRADE TO VERSION 4.1
+
+--------------FILES TO UPDATE----------------
+
+app/routes.php
+app/functions.php
+
+
+app/config/site/users.php
+
+app/Controllers/PostController.php
+
+app/Repositories/PostRepository.php
+
+themes/frontend/default/assets/css/style.css
+
+themes/admincp/default/views/user/lists.blade.php
+
+themes/frontend/default/views/comment/display.blade.php
+themes/frontend/default/views/comment/display-page.blade.php
+
+themes/frontend/default/views/post/headers/community.blade.php
+themes/frontend/default/views/post/headers/page.blade.php
+themes/frontend/default/views/post/headers/user.blade.php
+
+
+themes/frontend/default/views/user/birthdate.blade.php
+
+
+LOGIN TO YOUR ADMINCP TO THE FOLLOWING
+
+-admincp -> update database
+-admincp -> configurations -> update configuration
+

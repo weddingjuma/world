@@ -1,0 +1,6 @@
+.oembed-iframe {
+    width: 100%;
+}
+.oembed-iframe iframe{
+    width: 100% !important;
+}

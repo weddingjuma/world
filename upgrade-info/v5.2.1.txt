@@ -1,0 +1,15 @@
+-------CHANGES MADE------
+
+-Fix new user and page profile cover issue on low screens
+-Made view post link visible to search engine for SEO
+-Fix issue with guest search the network - Please update Event addon it is cause by it
+
+-----FILES TO UPDATE------
+
+-workbench/idocrea8/image/src/Idocrea8/Image/ImageProcessor.php
+
+-themes/frontend/default/assets/css/style-v5.2.css
+
+-themes/frontend/default/views/profile/layout.blade.php
+
+-themes/frontend/default/views/page/profile/layout.blade.php

@@ -1,0 +1,68 @@
+body{
+    background: #19B5FE;
+}
+#login-container
+{
+    width:400px;
+    margin: 10% auto;
+}
+#login-container #login-logo{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+#login-container #login-title
+{
+    width: 100%;
+    border-left: solid 4px #FFB39B;
+    background: white;
+    padding: 10px 15px;
+    -moz-box-shadow: 0px 0px 3px 0px #eeeeee;
+    -webkit-box-shadow: 0px 0px 3px 0px #eeeeee;
+    box-shadow: 0px 0px 3px 0px #eeeeee;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #808080;
+    position: relative;
+}
+#login-container form{
+    background: white;
+    -moz-box-shadow: 0px 3px 0px 0px lightgrey;
+    -webkit-box-shadow: 0px 3px 0px 0px lightgrey;
+    box-shadow: 2px 3px 0px 0px lightgrey;
+
+}
+#login-container form input[type=text], #login-container form input[type=password]{
+    margin: 10px;
+    width: 95%;
+    border: solid 2px #E9E9E9;
+    padding:11px 7px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s ;
+}
+#login-container form input[type=text]:focus{
+    border-color: #FFB39B;
+}
+#login-container form #login-footer
+{
+
+    padding: 5px 10px;
+    height: 50px;
+}
+#login-container #forgot-password-link a{
+    color: #808080;
+}
+
+@media (max-width: 767px) {
+    #login-container{
+        margin: 0;
+        width: 97%;
+        padding: 0 10px;
+    }
+}

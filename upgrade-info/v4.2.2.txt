@@ -1,0 +1,44 @@
+------CHANGES MADE-------
+
+-Fixed the upload cover problem
+-Fixed scrolling in messaging system
+-Fixed youtube video search issue kindly visit our knowledgebase on how to configure it here
+-----http://support.crea8social.com/article
+-fix problem with cover picture when user changes avatar
+-Fix other bugs and increased security of the system
+-Added new option to CDN Amazon options to set the endpoint url via admincp -> configurations -> cdn-server
+
+------FILES YOU NEED TO ADD--------
+
+-app/config/site/youtube.php
+
+------FILES TO CHANGE-----
+
+-themes/frontend/default/views/search/people.blade.php
+
+-themes/frontend/default/assets/js/script.js
+
+-app/config/site/cdn-server.php
+
+-app/Controllers/PostController.php
+
+-app/Models/User.php
+
+-app/Repositories/UserRepository.php
+-app/Repositories/GameRepository.php
+-app/Repositories/BlockedUserRepository.php
+-app/Repositories/CommentRepositoy.php
+-app/Repositories/CommunityMemberRepository.php
+-app/Repositories/CommunityRepository.php
+-app/Repositories/ConnectionRepository.php
+-app/Repositories/LikeRepository.php
+-app/Repositories/MessageRepository.php
+-app/Repositories/PageRepository.php
+-app/Repositories/PhotoAlbumRepository.php
+-app/Repositories/ReportRepository.php
+-app/Repositories/PostRepository.php
+-app/Repositories/CDNRepository.php
+
+
+
+-workbench/idocrea8/image/src/Idocrea8/Image/ImageProcessor.php

@@ -1,0 +1,179 @@
+-----------------CHANGES MADE----------------------
+
+
+-Fixed issue with change of password removing verification badge
+-Offline option cause automatically offline for admin users
+    -Now members only have option to set to online or busy
+    -It is automatically set to offline when user is idle for 15minutes or logout
+-Fixed loadding text to loading..
+-Corrected message conversations to load all
+-Removed chatbox from mobile, it cause problem when scrolling page on mobile
+-Added auto replace of youtube,vimeo or soundcloud links to the appropriate player
+-Site Optimization with database optimization (Adding mysql index to each tables),further caching of contents
+-Support for CDN Servers (Two driver included Amazon S3 and self hosted CDN Server) for serving media files e.t.c
+
+-------------HOW TO UPGRADE--------------------------------------------------------------------
+
+To upgrade to version 4.2 requires you to add and update some files from your crea8social installation
+
+You are required to set your site to maintenance mode to prevent your members seeing errors while you
+do update
+
+HOW - GO TO admincp -> configurations -> general - maintenance mode SET IT TO yes
+
+ALSO - Enable Debug in case there is error in your update, you and me can figure it out if you enable this value
+
+HOW - GO TO admincp -> configurations -> general - enable debug SET IT TO yes
+-----------------------------------------------------------------------------------------------
+
+NOW CONTINUE EACH SEGMENT BELOW AND DO THE FINAL STEP STATED BELOW
+
+Extract the new downloaded crea8social version 4.2 file and extract the main.zip
+
+-Any file you want to add or update by overwrite should be taking from this newly downloaded file even for old versions
+
+---------------PLEASE NOTE--------------------------
+
+IF YOU YET TO UPGRADE TO VERSION 4.0 OR VERSION 4.1 OR VERSION 4.1.1 CONSIDER DOING SO BEFORE UPGRADING TO VERSION 4.2
+
+HOW : MAKE USE OF NEWLY DOWNLOAD FILE TO UPDATE/ADD EACH FILE STATED IN v4.0.txt or v4.1.txt or v4.1.1.txt instructions
+
+----------------------------------------------------
+
+
+-------------ADD THE FOLLOWING FILES---------
+
+app/config/site/cdn-server.php
+app/config/site/cache.php
+
+app/library/amazon-3/S3.php
+
+-app/Repositories/CDNRepository.php
+
+
+--------------UPDATE/OVERWRITE THE FOLLOWING FILES---------
+
+---
+-workbench/idocrea8/image/src/config/config.php
+-workbench/idocrea8/image/src/Idocrea8/Image/Image.php
+-workbench/idocrea8/image/src/Idocrea8/Image/ImageProcessor.php
+---
+
+---
+-app/Controllers/MessageController.php
+-app/Controllers/PostController.php
+-app/Controllers/ProfileController.php
+-app/Controllers/PageController.php
+-app/Controllers/CommunityPageController.php
+-app/Controllers/UserHomeController.php
+---
+
+---
+-app/Models/User.php
+-app/Models/PhotoAlbum.php
+---
+
+---
+-app/Presenters/PostPresenter.php
+-app/Presenters/UserPresenter.php
+-app/Presenters/PagePresenter.php
+-app/Presenters/CommunityPresenter.php
+---
+
+---
+-app/Providers/PostServiceProvider.php
+---
+
+---
+-app/Repositories/UserRepository.php
+-app/Repositories/PhotoRepository.php
+-app/Repositories/PostRepository.php
+-app/Repositories/CommentRepository.php
+-app/Repositories/ConnectionRepository.php
+-app/Repositories/PageRepository.php
+-app/Repositories/GameRepository.php
+-app/Repositories/CommunityRepository.php
+-app/Repositories/CommunityMemberRepository.php
+-app/Repositories/HashtagRepository.php
+-app/Repositories/MessageConversationRepository.php
+---
+
+---
+-app/routes.php
+-app/functions.php
+-app/routes/admincp.php
+---
+
+---
+-app/SetupDatabase/Install.php
+---
+
+---
+-themes/frontend/default/assets/js/script.js
+-themes/frontend/default/assets/css/style.css
+---
+
+---
+-themes/frontend/default/views/community/page/index.blade.php
+---
+
+---
+-themes/frontend/default/views/connection/side-lists.blade.php
+---
+
+---
+-themes/frontend/default/views/discover/post.blade.php
+-themes/frontend/default/views/discover/mention.blade.php
+---
+
+---
+-themes/frontend/default/views/layouts/footer.blade.php
+---
+
+---
+-themes/frontend/default/views/messages/right.blade.php
+-themes/frontend/default/views/messages/display.blade.php
+---
+
+---
+-themes/frontend/default/views/photo/display-photo.blade.php
+---
+
+---
+-themes/frontend/default/views/post/video.blade.php
+-themes/frontend/default/views/post/paginate.blade.php
+-themes/frontend/default/views/post/media.blade.php
+---
+
+---
+-themes/frontend/default/views/profile/timeline-widget.blade.php
+---
+
+---
+-themes/frontend/default/views/page/profile/timeline-widget.blade.php
+---
+
+---
+-themes/frontend/default/views/search/posts.blade.php
+-themes/frontend/default/views/search/hashtag.blade.php
+---
+
+---
+-themes/frontend/default/views/user/home/feeds.blade.php
+---
+
+
+
+-------------FINAL STEP-----------------------
+
+AFTER COMPLETION OF ALL THE FILES NOW TIME TO FINISH UP THE UPGRADE PROCESS
+
+---GO TO ADMINCP
+
+--CLICK ADMINCP -> UPDATE DATABASE
+
+--ALSO ADMINCP ->CONFIGURATIONS -> UPDATE CONFIGURATION
+
+--NOW PLAY AROUND IN CASE THERE IS ANY ERROR AND GET BACK TO ME AS DESCRIBE ABOVE. THANKS
+
+--NOW DISABLE THE MAINTENANCE MODE AND DEBUG MODE IF THERE IS NO ERROR

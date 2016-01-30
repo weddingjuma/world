@@ -1,0 +1,1 @@
+{{app('App\\Repositories\\AdsRepository')->getSide()}}

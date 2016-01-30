@@ -1,0 +1,13 @@
+#!/bin/bash
+# This is a simple post deploy hook executed after your application
+# is deployed and started.  This script gets executed directly, so
+# it could be python, php, ruby, etc.
+
+echo "[POST DEPLOY] Copying DB configs from .openshift/config/"
+cp -rf $OPENSHIFT_REPO_DIR/.openshift/misc/config/* ${OPENSHIFT_REPO_DIR}app/config/ 2>/dev/null
+
+if [ -f "$OPENSHIFT_REPO_DIR/app/views/hello.php" ]; then
+
+  cp -rf $OPENSHIFT_REPO_DIR/.openshift/misc/views/hello.php ${OPENSHIFT_REPO_DIR}app/views/ 2>/dev/null
+
+fi

@@ -1,0 +1,30 @@
+-----------------CHANGES-------------------------
+
+-Fix share breaks
+-Fix bug in mobile signup
+-Fix bug in auto scroll pagination
+-Added sound notification
+
+----------------FILES TO UPDATE-----------------
+
+app/routes/message.php
+app/repositories/PostRepository.php
+
+app/controllers/ProfileController.php
+app/controllers/CommunityPageController.php
+app/controllers/PageController.php
+
+vendor/composer/autoload_classmap.php
+vendor/creolab/laravel-modules/src/Module.php
+
+themes/fontend/default/views/messages/chatbox.blade.php
+
+themes/fontend/default/views/layouts/footer.blade.php
+
+themes/fontend/default/views/profile/side-content.blade.php
+
+themes/frontend/default/assets/css/style.css
+themes/frontend/default/assets/js/script.js
+
+-------------ADDED FILES---------------------
+themes/frontend/default/assets/sounds/ --add all the music files

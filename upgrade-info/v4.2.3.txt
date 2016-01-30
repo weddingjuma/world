@@ -1,0 +1,13 @@
+---------------CHANGES MADE----------------
+
+--Fix the mobile upload of pics
+-Prevented posting of invalid youtube or vimeo link but not check really if the video exists on there server
+
+--------------FILES TO UPDATES------------
+
+-app/Repositories/PostRepository.php
+
+
+-workbench/idocrea8/image/src/Idocrea8/Image/ImageProcessor.php
+
+-------------------------------------------

@@ -1,0 +1,11 @@
+--18/10/2014----
+--Fixed bug on adding more language from admincp
+--fix bug in real time pulling of new post in discover and search page
+--fixed bug on users when delete, report posts or profile bring error
+--Fixed bug in post shared when the original owner has been deleted
+
+--files --
+app/repositories/LanguageRepository
+themes/admincp/default/views/report/list.blade.php
+app/repositories/ReportRepository
+app/repositories/PostRepository.php

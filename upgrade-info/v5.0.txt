@@ -1,0 +1,71 @@
+-------THINGS DONE------------------------
+
+-Improved login and signup form for cases where member network drops
+-Prevented unactivated or uncompleted registration users appear on the site until the registration is completed
+-Improved post editor
+-Indication for upload of photos,videos and files in post editor
+-Powerful URl Expanding System in your member posts (Checkout https://github.com/mpratt/Embera/blob/master/PROVIDERS.md
+for the supported OEmbed service providers)
+-Fixed share file button that wasn't showing
+-fixed issue with non-community members from making comment on posts unless they are members
+-Added support for inline-ads display in posts after 5 posts
+-Fixed issue with video file not uploading...
+-prevent edit of shared posts
+------Free Addons Added-------------------------
+-Premium modern admin theme added
+-Premium URL Shortener addon added
+-Ctrlenter addon
+-Customwidget addon
+-Onlinemembers addon
+-Custompage addon
+
+-----New Addons -----
+-Invitee Addon - A way for your members to import contacts from gmail, yahoo
+-Event Addon - Still in progress coming soon
+
+
+-----------FILES TO ADDED TO YOUR SITE---------------------
+-app/library/Embera/
+
+-themes/frontend/default/assets/css/style-v5.css
+
+-------FILES TO UPDATE-------------------
+app/config/site/post.php
+
+app/lang/en/post.php
+
+-app/Repositories/SocialauthRepository.php
+-app/Repositories/UserRepository.php
+-app/Repositories/PostRepository.php
+-app/Repositories/InvitedMemberRepository.php
+
+-app/Presenters/PostPresenter.php
+
+-themes/frontend/default/assets/js/script.js
+-themes/frontend/default/assets/js/jquery.form.js
+
+-themes/frontend/default/boot.php
+
+-themes/frontend/default/views/home/index.blade.php
+
+-themes/frontend/default/views/post/media.blade.php
+-themes/frontend/default/views/post/headers/user.blade.php
+-themes/frontend/default/views/post/editor/main.blade.php
+
+-themes/frontend/default/views/post/paginate.blade.php
+
+-themes/frontend/default/views/invite/send.blade.php
+
+-themes/frontend/default/views/user/home/feeds.blade.php
+-themes/frontend/default/views/user/getstarted/index.blade.php
+
+---------TO HAVE DESIGN CHANGES IN VERSION 5.0 REPLACE----------------
+
+-themes/frontend/default/assets/css/style.css
+-themes/frontend/default/assets/images/topography3.jpg
+-themes/frontend/default/assets/images/header_bg.jjpg
+
+----------------------------------------------------------------------
+
+----------TO UPGRADE YOUR ADMIN THEME FROM DEFAULT TO THE
+

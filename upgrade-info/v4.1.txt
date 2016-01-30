@@ -1,0 +1,174 @@
+----CHANGES MADE-----------------------------------------------------------
+
+-Added a new text editor used by blog,custom addon
+-Fixed bug with Redirect to https if enabled via admincp
+-Fixed bug with email notification upon new comment to a post
+-Added option for members to change email address from their account settings
+-Fixed Safari issue to render home page members list correctly
+-Fixed Global admin comment issue on pages post, to show their real entity not the page admin
+-Fixed issue with member automatically going offline
+-Fixed layout break on user and pages profile side content
+-Fixed bug with profile wall post privacy when set to nobody
+-Fixed issue with incorrect member age
+-Added option to edit comment
+-Added post load more button to pages,user profile, community pages
+-Added option to set the minimum age for a user to have before registering
+-Fixed issue with games when disabled
+
+NOTE : IF YOU HAVE DATE INCORRECT ISSUE, THIS IS CAUSE BY SERVER PLEASE CONTACT ME VIA MAIL,I WILL WORK YOU TRUE CORRECTING IT
+
+--------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+| HERE AT PROCREA8 WE SAY BIG THANKS TO YOU FOR USING CREA8SOCIAL - SOCIAL NETWORKING PLATFORM  |
+----------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+
+FORMAT TO CONTACT ME IN CASE OF ANY PROBLEM
+ Please only contact me via : procrea82014@gmail.com for upgrade issue
+ If you comment on item comment section, you won't have my reply, you have my word
+ Reason : I can't send any file through the comment section or even get your credentials to correct things for
+ so whats the essence of contact via there, so please contact through the mail.
+
+ FORMAT :
+
+ Your site : www.example.com
+ Your Purchase code : your_purchase_code_here
+ Your admincp login details:
+    Username : your_username
+    Password : your_password
+ Ftp login details:
+    ftp host : your_host
+    Ftp username : your_ftp_username
+    Ftp password : your_ftp_passowrd
+    Ftp port : your_port
+    Ftp protocol : ftp or sftp e.t.c
+
+ NOTE : PLEASE WE ARE NOT AVAILABLE TO UPGRADE FOR ANYBODY BUT WE CAN CORRECT MISTAKE IN UPGRADE
+ SO PLEASE DON'T SEND HELP ME TO UPGRADE, BECAUSE YOU WON'T GET REPLY FROM US AT ALL
+
+ MAKE YOUR FULLY ATTEMPT AND IF YOU HAVE ERROR CONTACT US WITH THE FORMAT ABOUT
+------------------------------------------------------------------------------------------------
+
+-------------HOW TO UPGRADE--------------------------------------------------------------------
+
+To upgrade to version 4.1 requires you to add and remove some files from your crea8social installation
+
+You are required to set your site to maintenance mode to prevent your members seing error while you
+do update
+
+HOW - GO TO admincp -> configurations -> general - maintenance mode SET IT TO yes
+
+ALSO - Enable Debug incase there is error in your update, you and me can figure it out if you enable this value
+
+HOW - GO TO admincp -> configurations -> general - enable debug SET IT TO yes
+-----------------------------------------------------------------------------------------------
+
+NOW CONTINUE EACH SEGMENT BELOW AND DO THE FINAL STEP STATED BELOW
+
+Extract the new downloaded crea8social version 4.1 file and extract the main.zip
+
+-Any file you want to add or update by overwrite should be taking from this newly downloaded file
+
+
+----ADD THE FOLLOWING FILES---------
+
+---
+themes/frontend/default/assets/css/wysiwyg-editor.css
+themes/frontend/default/assets/js/wysiwyg-editor.js
+themes/frontend/default/assets/js/wysiwyg.js
+
+themes/frontend/default/assets/fontsawesome/ add all the files inside it
+---
+
+---
+themes/admincp/default/assets/css/wysiwyg-editor.css
+themes/admincp/default/assets/js/wysiwyg-editor.js
+themes/admincp/default/assets/js/wysiwyg.js
+
+themes/admincp/default/assets/fontsawesome/ add all the files inside it
+---
+
+------------------------
+
+
+
+---UPDATE THE FOLLOWING FILES BY OVERWRITING THEM-----
+
+---
+app/config/site/users.php
+---
+
+---
+app/Controllers/BaseController.php
+app/Controllers/CommentController.php
+app/Controllers/SignupController.php
+---
+
+---
+app/lang/en/user.php NOTE : Option this file to check new text added to avoid overwriting the file totally
+---
+
+---
+app/filters.php
+app/functions.php
+app/routes.php
+---
+
+---
+app/routes/comment.php
+---
+
+---
+app/Presenters/PagePresenter.php
+app/Presenters/PostPresenter.php
+---
+
+---
+app/Providers/ConfigurationServiceProvider.php
+---
+
+---
+app/Repositories/CommentRepository.php
+app/Repositories/UserRepository.php
+app/Repositories/PostRepository.php
+---
+
+
+---
+themes/frontend/default/boot.php
+themes/frontend/default/assets/js/script.js
+
+themes/frontend/default/assets/css/style.css
+
+themes/frontend/default/views/comment/display.blade.php
+themes/frontend/default/views/comment/display-page.blade.php
+
+themes/frontend/default/views/community/page/index.blade.php
+
+themes/frontend/default/views/user/account/index.blade.php
+
+themes/frontend/default/views/profile/side-content.blade.php
+themes/frontend/default/views/profile/timeline-widget.blade.php
+
+themes/frontend/default/views/page/profile/side.blade.php
+themes/frontend/default/views/page/profile/timeline-widget.blade.php
+---
+
+---
+themes/admincp/default/boot.php
+themes/admincp/default/assets/js/script.js
+---
+
+
+AFTER COMPLETION OF ALL THE FILES NOW TIME TO FINISH UP THE UPGRADE PROCESS
+
+---GO TO ADMINCP
+
+--CLICK ADMINCP -> UPDATE DATABASE
+
+--ALSO ADMINCP ->CONFIGURATIONS -> UPDATE CONFIGURATION
+
+--NOW PLAY AROUND IN CASE THERE IS ANY ERROR AND GET BACK TO ME AS DESCRIBE ABOVE. THANKS
+
+--NOW DISABLE THE MAINTENANCE MODE AND DEBUG MODE IF THERE IS NO ERROR

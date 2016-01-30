@@ -1,0 +1,24 @@
+-------------WORK DONE-------------------------
+
+-Fix small issue with post editor
+-Fixed language mix when switching post privacy in editor
+-Fix invite translation in explorer menu
+-Fix issue with profile bio text and side profile info
+-Fix who can post on timeline issue
+-Prepared crea8social for Addons/Plugins
+
+------------FILES TO UPDATE--------------------
+
+-themes/frontend/default/assets/js/script.js
+
+-themes/frontend/default/views/post/editor/main.blade.php
+
+-themes/frontend/default/views/profile/layout.blade.php
+-themes/frontend/default/views/profile/side-content.blade.php
+
+themes/frontend/default/views/user/account/privacy.blade.php
+
+-app/config/packages/creolab/laravel-modules/config.php
+-app/config/app.php
+
+-vendor/creolab/laravel-modules/src/Finder.php

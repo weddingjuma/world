@@ -1,0 +1,46 @@
+
+--PLEASE THIS FURTHER UPDATE TO VERSION 4.2 PLEASE MAKE SURE YOU UPDATE TO 4.2 BEFORE THIS,
+
+FOR MORE ENQUIRY PLEASE OPEN A TICKET AT http://support.crea8social.com
+
+OR HAVE A LIVE CHAT AT http://crea8social.com
+
+-Fixed profile image issue
+-Fixed a security hole
+-Added verified icon display in users tags suggestion
+-Fixed issue with disabling change of username by members
+-Changed date format in messages
+
+-------FILES TO UPDATE------------
+
+-app/Controllers/PostController.php
+
+-app/Models/User.php
+
+-app/SetupDatabase/Install.php
+-app/Presenters/UserPresenter.php
+-app/Presenters/NotificationPresenter.php
+
+-app/Repositories/PhotoRepository.php
+-app/Repositories/UserRepository.php
+
+-themes/frontend/default/views/comment/display-page.blade.php
+
+-themes/frontend/default/views/user/tag/username.blade.php
+-themes/frontend/default/views/user/tag/suggestion.blade.php
+
+-themes/frontend/default/views/user/birthdate.blade.php
+
+-themes/frontend/default/views/notification/like/comment.blade.php
+
+-themes/frontend/default/views/messages/display.blade.php
+-themes/frontend/default/views/messages/display-dropdown.blade.php
+
+-------------FINAL STEP-----------------------
+
+AFTER COMPLETION OF ALL THE FILES NOW TIME TO FINISH UP THE UPGRADE PROCESS
+
+---GO TO ADMINCP
+
+--CLICK ADMINCP -> UPDATE DATABASE
+

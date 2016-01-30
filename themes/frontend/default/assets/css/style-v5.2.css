@@ -1,0 +1,218 @@
+.photo-viewer{
+    width: 100% !important;
+
+}
+.photo-viewer #cboxContent {
+    background: #FFFFFF;
+
+}
+@media(min-width: 700px) {
+    #cboxTopLeft{width:21px; height:0;}
+    #cboxTopRight{width:21px; height:0; }
+    #cboxBottomLeft{width:21px; height:0; }
+    #cboxBottomRight{width:21px; height:0; }
+    #cboxMiddleLeft{width:0; }
+    #cboxMiddleRight{width:0; }
+    #cboxTopCenter{height:0;}
+    #cboxBottomCenter{height:0;}
+
+}
+
+.render-post-images{margin: 5px 10px;position: relative}
+.render-post-images .one-image{
+    width: 100%;
+    overflow: hidden;
+}
+.render-post-images .one-image a{
+    margin: auto;
+    display: block;
+}
+.render-post-images .one-image img{max-width: 100%;margin: auto;
+    display: block;}
+.render-post-images .two-images a{
+    width: 48%;
+    margin-right: 2%;
+    height: 200px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    display: inline-block;
+}
+.render-post-images .two-images a:last-child{
+    margin: 0;
+}
+.render-post-images .three-images .top a,
+.render-post-images .four-images .top a
+{
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    display: inline-block;
+}
+.render-post-images .three-images .bottom,
+.render-post-images .four-images .bottom
+{
+    margin-top: 3px !important;
+}
+.render-post-images .three-images .bottom a,
+.render-post-images .four-images .bottom a
+{
+    width: 49.4%;
+    margin: 0;
+    margin-right: 0.1em;
+    height: 150px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    display: inline-block;
+    padding: 0;
+    position: relative;
+}
+.render-post-images .three-images .bottom a:last-child,
+.render-post-images .four-images .bottom a:last-child{margin: 0 !important;}
+.render-post-images .four-images .bottom a{
+    width: 32.75%;
+}
+
+@media(max-width: 900px) {
+    .render-post-images .four-images .bottom a{
+        width: 32.5%;
+    }
+    .render-post-images .three-images .bottom a{
+        width: 49%;
+    }
+}
+
+@media(max-width: 500px) {
+    .render-post-images .four-images .bottom a{
+        width: 32%;
+    }
+    .render-post-images .three-images .bottom a{
+        width: 49%;
+    }
+}
+
+.render-post-images .four-images .bottom a .more-photo-count{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.5);
+    color: #ffffff;
+    position:absolute;
+
+}
+.render-post-images .four-images .bottom a .more-photo-count span{
+    font-size: 45px;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 20%;
+}
+
+.file-input{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    display: block;
+}
+
+.profile-header{
+    height: auto;
+    position: relative;
+}
+.profile-header .profile-nav{
+    position: relative;
+}
+.profile-header .profile-info{
+    height: 100%;
+    background: none;
+    position: absolute;
+    top: 0 !important;
+    z-index: 99;
+}
+.profile-header .profile-info .title,
+.profile-header .profile-info .about-info
+{
+    text-shadow: 2px 2px 2px  black;
+}
+.profile-header .profile-cover-changer
+{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 99;
+}
+@media(max-width: 800px) {
+    .profile-header .profile-info .about-info{
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+
+
+    .profile-header .profile-info .avatar {
+        width: 80px;
+        height: 80px;
+        margin: 0 20px;
+    }
+    .profile-header .profile-info .title{
+        margin: 0 10px;
+        float: left;
+    }
+}
+@media (max-width: 400px) {
+
+
+    .profile-header .profile-info .avatar {
+        width: 70px;
+        height: 70px;
+        margin: 0 10px;
+
+    }
+
+    .profile-header .profile-info .title{
+        display: none;
+    }
+}
+
+.profile-header .profile-resize-cover,
+.profile-header .original-profile-cover
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-height: 270px;
+}
+.profile-header .profile-resize-cover img{width: 100%;}
+.profile-header .original-profile-cover{
+    display: none;
+    cursor: move;
+    z-index: 99;
+    height: 270px;
+
+}
+.profile-header .profile-cover-indicator{
+    position: absolute;
+    top: 0;
+    height: 300px;
+    background: rgba(255,255,255, 0.8);
+    width: 100%;
+    z-index: 999;
+    display: none;
+}
+.profile-header .profile-cover-indicator div{
+    margin: 15% 45%;
+    position: relative;
+    font-weight:bold;
+    font-size: 20px;
+
+}
+
+.profile-header .profile-cover-reposition-button{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 99;
+    display: none;
+}

@@ -1,0 +1,20 @@
+{
+    "name": "idocrea8/hook",
+    "description": "",
+    "authors": [
+        {
+            "name": "iDocrea8",
+            "email": "iDocrea8@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Idocrea8\\Hook": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

@@ -1,0 +1,52 @@
+---------------CHANGES MADE------------------------
+
+-Fixed  issue with post listing
+-Improved crea8social theme system
+-Fixed issue with newsletter not being formatted very well
+-Fixed adding of game issue via admincp
+-Solved auto-like pages by new members not working before
+-fixed issue with change of profile pic by users coming from social networks
+-Fixed bug with friend request count notification
+-Fixed logout issue
+-Improved the page loading speed
+
+
+-------------FILES TO UPDATE-----------------------
+
+workbench/idocrea8/theme/src/Idocrea8/Theme.php
+workbench/idocrea8/theme/src/Idocrea8/asset/AssetFinder.php
+workbench/idocrea8/theme/src/Idocrea8/asset/AssetContainer.php
+
+app/filters.php
+
+app/config/session.php
+
+app/config/site/general.php
+
+app/Providers/NotificationServiceProvider.php
+app/Providers/PostServiceProvider.php
+
+app/Controllers/LoginController.php
+app/Controllers/BaseController.php
+app/Controllers/UserUpdateController.php
+app/Controllers/ConnectionController.php
+
+app/Presenters/PostPresenter.php
+
+app/Repositories/UserRepository.php
+app/Repositories/SocialauthRepository.php
+app/Repositories/NewsletterRepository.php
+app/Repositories/CommunityRepository.php
+app/Repositories/GameRepository.php
+app/Repositories/PageRepository.php
+app/Repositories/PhotoAlbumRepository.php
+
+
+themes/frontend/default/assets/js/script.js
+
+themes/admincp/default/views/games/add.blade.php
+themes/admincp/default/views/games/edit.blade.php
+
+themes/frontend/default/views/user/account/index.blade.php
+
+themes/frontend/default/views/profile/layout.blade.php

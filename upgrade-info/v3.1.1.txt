@@ -1,0 +1,35 @@
+---------------CHANGES MADE------------------------
+
+-Fixed issue with url/ links matching in post text
+-Fixed authentication issue
+-fixed issue with new games
+-Fixed user saying offline
+-Fixed issue with when tagging people in your posts
+
+
+
+-------------FILES TO UPDATE----------------------
+
+app/lang/en/user.php
+
+app/functions.php
+
+app/Controllers/LoginController.php
+app/Controllers/Base/GameBaseController.php
+
+app/routes/notification.php
+
+app/Repositories/PostRepository.php
+app/Repositories/GameRepository.php
+app/Repositories/CommentRepository.php
+app/Repositories/UserRepository.php
+
+app/views/emails/post/comment.blade.php
+
+
+themes/frontend/default/views/layouts/header.blade.php
+themes/frontend/default/views/post/headers/user.blade.php
+
+themes/frontend/default/assets/css/style.css
+
+themes/frontend/default/assets/js/script.js

@@ -1,0 +1,164 @@
+--------WORKDONE----------------------
+
+-ADDED welcome mail subject to mail translation
+-Improved online users list
+-Enable non-login members to view posts
+-Improved ajax submission of forms in post,messages e.t.c
+-Moved addons folder into app/ folder
+-Added Preview to uploaded photos through messaging/chatting
+-Fixed bug in comment on a post notification
+-Fixed issue with photo viewing through notification
+-Added items to admincp +Add menu
+-Fixed #hashtag/@mention not being process when editing a post
+-Improved display of photos in post
+-Fixed bug, pages can create post but cannot comment
+-Changed genre to gender
+-Enlarge the profile avatar
+-Fix break in developers page
+-Added profile statistics
+-Changed icon for emoticon
+-Added dropdown for friend requests
+-Improved search of musics/videos in post editor
+-Added option to auto to unverified any member that changes his/her username
+-Fixed issue with page name, community e.t.c
+-User can now hide posts they don't like from there News Feed
+-Fixed issue with mobile menu when logout
+-Post time can now be translated to other languages
+-Added Filter by city, country and gender
+
+------FILES TO UPDATE------
+app/lang/mail.php
+app/lang/en/global.php
+app/lang/en/connection.php
+app/lang/en/post.php
+
+app/config/site/user.php
+-app/config/packages/creolab/laravel-modules/config.php
+
+app/routes/post.php
+app/filters.php
+
+app/controllers/admincp/AddonController.php
+
+app/controllers/SocialauthController.php
+app/controllers/PostController.php
+app/controllers/CommentController.php
+app/controllers/ConnectionController.php
+app/controllers/CommunityController.php
+app/controllers/CommunityPageController.php
+app/controllers/PageController.php
+app/controllers/GameController.php
+app/controllers/GameProfileController.php
+app/controllers/BaseController.php
+app/controllers/UserGetstartedController.php
+
+
+-app/Models/Comment.php
+-app/Models/User.php
+-app/Models/Photos.php
+
+-app/providers/HashtagServiceProvider.php
+
+app/presenters/GamePresenter.php
+app/presenters/PostPresenter.php
+
+
+-app/repositories/CommentRepository.php
+-app/repositories/NewsletterRepository.php
+-app/repositories/PostRepository.php
+-app/repositories/PhotoRepository.php
+-app/repositories/PhotoAlbumRepository.php
+-app/repositories/HashtagRepository.php
+-app/repositories/ConnectionRepository.php
+-app/repositories/CommunityRepository.php
+-app/repositories/PageRepository.php
+-app/repositories/GameRepository.php
+-app/repositories/UserRepository.php
+-app/repositories/PostHide.php
+
+
+-app/routes/connection.php
+-app/routes/post.php
+-app/routes/user.php
+-app/routes/likes.php
+
+app/SetupDatabase/Install.php
+
+-vender/composer/autoload_psr4.php
+
+-vendor/creolab/laravel-modules/src/Finder.php
+-workbench/idocrea8/theme/src/config/config.php
+-workbench/idocrea8/image/src/Idocrea8/Image/image.php
+
+themes/admincp/default/views/layouts/header.blade.php
+
+themes/frontend/default/boot.php
+themes/frontend/default/assets/js/script.js
+themes/frontend/default/assets/js/jquery.timeago.js
+themes/frontend/default/assets/css/style.css
+
+themes/frontend/default/views/comment/display-page.blade.php
+themes/frontend/default/views/comment/form.blade.php
+themes/frontend/default/views/comment/paginate.blade.php
+
+themes/frontend/default/views/messages/online.blade.php
+themes/frontend/default/views/messages/message.blade.php
+themes/frontend/default/views/messages/chatbox.blade.php
+themes/frontend/default/views/messages/display.blade.php
+themes/frontend/default/views/messages/display-dropdown.blade.php
+
+themes/frontend/default/views/connection/side-lists.blade.php
+
+themes/frontend/default/views/community/layout.blade.php
+
+themes/frontend/default/views/game/layout.blade.php
+
+themes/frontend/default/views/page/layout.blade.php
+
+themes/frontend/default/views/notification/comment/photo.blade.php
+
+themes/frontend/default/views/layouts/header.blade.php
+themes/frontend/default/views/layouts/side-nav.blade.php
+
+themes/frontend/default/views/photo/side.blade.php
+themes/frontend/default/views/photo/display-photo.blade.php
+
+themes/frontend/default/views/post/media.blade.php
+themes/frontend/default/views/post/auto-post/body.blade.php
+themes/frontend/default/views/post/editor/main.blade.php
+themes/frontend/default/views/post/format-media-search.blade.php
+themes/frontend/default/views/post/header/user.blade.php
+themes/frontend/default/views/post/header/page.blade.php
+themes/frontend/default/views/post/header/community.blade.php
+
+themes/frontend/default/views/profile/layout.blade.php
+themes/frontend/default/views/profile/side-content.blade.php
+
+themes/frontend/default/views/search/people.blade.php
+
+themes/frontend/default/views/user/account/index.blade.php
+themes/frontend/default/views/user/getstarted/index.blade.php
+
+themes/frontend/default/asssets/css/style.css
+
+----------------ADDED FILES---------------------
+
+app/repositories/HidePost.php
+
+app/repositories/HidePostRepository.php
+
+themes/frontend/default/assets/images/emoticon.png
+themes/frontend/default/assets/css/jquery.nailthumb.css
+themes/frontend/default/assets/js/jquery.nailthumb.min.js
+
+themes/frontend/default/assets/images/community/topography.jpg
+themes/frontend/default/assets/images/page/topography.jpg
+themes/frontend/default/assets/images/topography.jpg
+themes/frontend/default/assets/images/game/logo.jpg
+themes/frontend/default/assets/images/game/topography.jpg
+
+themes/frontend/default/views/connection/friend/dropdown-requests.blade.php
+
+themes/frontend/default/views/post/hide.blade.php
+---------FOLDERS TO ADD--------------
+app/addons/

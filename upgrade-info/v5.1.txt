@@ -1,0 +1,31 @@
+---------CHANGES - MADE-------------------------
+- Selected language from header is now use as the logged in or new member default language
+- Fixed privacy settings issue with friends&follower option
+- Added option to turn off friend requests
+- Added option to change profile picture right from user profile
+- Fixed little problem with images upload caused by extension
+---------FILES TO UPDATE------------------------
+
+-app/Providers/AdmincpServiceProvider.php
+
+-app/Presenters/UserPresenter.php
+
+-app/Repositories/ConnectionRepository.php
+-app/Repositories/PostRepository.php
+
+-workbench/idocrea8/image/src/Idocrea8/Image/ImageProcessor.php
+
+---------------------------------------------------
+This is a language file , if you have multiple languages you will need to add the new values you
+can find at the bottom of each language files version 5.01
+-------------------------------------------------------
+-app/lang/en/user.php
+
+--------------------------------------------------
+
+-themes/frontend/default/views/connection/buttons.blade.php
+
+-themes/frontend/default/views/profile/layout.blade.php
+
+-themes/frontend/default/views/user/account/privacy.blade.php
+

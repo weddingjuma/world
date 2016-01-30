@@ -1,0 +1,143 @@
+--Fixed bug in  comments for posts and photos
+--Fixed bug in notifications dropdown
+--fixed logo problem on mobile
+--Fixed bug in first photo upload in posts and profile photo
+--adding catchpa to registeration form
+--fix security hole in search box
+-fixed bug in twitter login
+--added view post link to post dropdown menu
+--fixed ajax loading break when back button is clicked
+-Fix bug with image with uppercase
+-fixed bug in photo viewer
+-Rework the mobile menu
+-Added login button to mobile nav-menu
+-Solve duplicate of hashtags
+-Change the way photos are posted in post
+-Remove unfilled profile fields from user profile, page e.t.c
+-Corrected custom field bug when deleted from admincp
+-corrected username issues in user profile, pages, community, and albums
+-validated page website field
+-fix problem with internet explorer in post editor
+-Remove sharing of auto posts
+-Fix assigning of moderators issue
+-Added skip button to getstarted page, and a little improvement to it
+-Added privacy to post on others timeline
+-Improvement to message system
+-Prevented block members to send each other messages
+-added change of location to user account settings
+-added feature to set first user avatar upload to cover
+-Improved the dedicated post page
+-Added user post preferred privacy saving for future posting
+-added users ability to social share posts to facebook,twitter,Google+ and LinkedIn
+-Added comments to games
+-Added social share of games to facebook,twitter,Google+
+
+
+--update files ---
+app/filters.php
+
+app/model/message.php
+app/model/game.php
+
+app/presenters/NotificationPresenter.php
+app/presenters/UserPresenter.php
+app/presenters/MessagePresenter.php
+
+app/repositories/HashtagRepository.php
+app/repositories/PostRepository.php
+app/repositories/PhotoRepository.php
+app/repositories/CustomFieldRepository.php
+app/repositories/MessageRepository
+app/repositories/UserRepository
+app/repositories/SocialauthRepository
+
+app/config/site/users.php
+app/config/site/post.php
+
+app/lang/en/user.php
+app/lang/en/post.php
+app/lang/en/validation.php
+app/lang/en/page.php
+app/lang/en/game.php
+app/lang/en/community.php
+app/lang/en/message.php
+
+app/routes/user.php
+app/routes/post.php
+
+app/setupdatabase/Install.php
+
+app/controllers/SignupController.php
+app/controllers/PageController.php
+app/controllers/PostController.php
+app/controllers/PageProfileController.php
+app/controllers/CommunityController.php
+app/controllers/base/SearchBaseController.php
+app/controllers/SocialauthController.php
+app/controllers/CommunityPageController.php
+app/controllers/GameController.php
+app/controllers/GameProfileController.php
+app/controllers/MessageController.php
+app/controllers/AccountController.php
+
+themes/frontend/default/boot.php
+themes/frontend/default/assets/js/script.js
+themes/frontend/default/assets/css/style.css
+themes/frontend/default/views/comment/display.blade.php
+themes/frontend/default/views/comment/form.blade.php
+themes/frontend/default/views/community/create.blade.php
+themes/frontend/default/views/home/index.blade.php
+themes/frontend/default/views/game/profile/index.blade.php
+
+themes/frontend/default/views/layouts/header.blade.php
+themes/frontend/default/views/layouts/side-nav.blade.php
+
+themes/frontend/default/views/messages/conversation.blade.php
+themes/frontend/default/views/messages/dropdown.blade.php
+themes/frontend/default/views/page/create.blade.php
+themes/frontend/default/views/page/profile/layout.blade.php
+themes/frontend/default/views/page/profile/side.blade.php
+themes/frontend/default/views/page/profile/side-likes.blade.php
+themes/frontend/default/views/photo/detail.blade.php
+themes/frontend/default/views/photo/display-photo.blade.php
+themes/frontend/default/views/post/editor/main.blade.php
+themes/frontend/default/views/post/media.blade.php
+themes/frontend/default/views/post/page.blade.php
+themes/frontend/default/views/post/auto-post/body.blade.php
+themes/frontend/default/views/post/editor/main.blade.php
+themes/frontend/default/views/post/headers/user.blade.php
+themes/frontend/default/views/post/headers/page.blade.php
+themes/frontend/default/views/post/headers/community.blade.php
+
+themes/frontend/default/views/profile/side-content.blade.php
+themes/frontend/default/views/profile/index.blade.php
+themes/frontend/default/views/profile/layout.blade.php
+
+
+themes/frontend/default/views/user/getstarted/index.blade.php
+themes/frontend/default/views/user/account/privacy.blade.php
+themes/frontend/default/views/user/account/index.blade.php
+themes/frontend/default/views/user/popover.blade.php
+themes/frontend/default/views/user/side-info.blade.php
+themes/frontend/default/views/user/home/index.blade.php
+
+
+workbench/idocrea8/image/src/Idocrea8/Image/ImageProcessor.php
+
+
+--add files/folders----
+app/library/captchalib/ --add this folder and its content
+themes/frontend/default/assets/js/jquery.offcanvasmenu.js
+themes/frontend/default/views/messages/display-dropdown.blade.php
+themes/frontend/default/views/post/social-share.blade.php
+themes/frontend/default/views/post/format-media-search.blade.php
+themes/frontend/default/assets/images/vk.png
+
+--remove files/folders
+themes/frontend/default/assets/js/jasny-bootstrap.min.js
+
+--Neccessary Action----
+After update and adding of files run database update and configuration update
+
+->admincp -> update database
+->admincp -> configurations -> update configuration

@@ -1,0 +1,68 @@
+-------------------CHANGES MADE----------------------------------------
+
+-Fixed deletion of posts/pages/games/users/community by non owners
+-BLock the trick to unfollow/Unfriend users for other members
+-Prevent multiple posts when user like a page or games
+-Fixed issue with email not going through when someone make comment on post
+-Fixed bug in post
+-Allow admin to be able to access private profiles
+-Prevent sharing of private post to social networks like posts directed to friends
+-Added verifybade to post comments
+-Added ability for admin to fully manage any page created by members
+-Improved the change of profile/page cover and community display photo
+-Fixed xss bug in posting location
+-Fixed issue with long text breaking layout on users profile
+-Fixed overwritten of other posts by stranger
+-Added option to search pages via admincp
+-Fixed issue with ban system allow
+--------------------FILES TO UPDATE----------------------------
+
+app/start/global.php
+app/filters.php
+
+app/Repositories/PostRepository.php
+app/Repositories/PageRepository.php
+app/Repositories/GameRepository.php
+app/Repositories/CommunityRepository.php
+app/Repositories/PhotoRepository.php
+app/Repositories/PhotoAlbumRepository.php
+app/Repositories/CommentRepository.php
+app/Repositories/NotificationRepository.php
+
+app/Controllers/ConnectionController.php
+app/Controllers/ApiController.php
+app/Controllers/ProfileController.php
+app/Controllers/PageController.php
+app/Controllers/CommunityPageController.php
+
+app/Controllers/Admincp/PageController.php
+
+
+app/Providers/PostServiceProvider.php
+
+app/Presenters/PostPresenter.php
+app/Presenters/UserPresenter.php
+app/Presenters/PagePresenter.php
+
+app/SetupDatabase/Install.php
+
+themes/admincp/default/views/pages/list.blade.php
+
+themes/frontend/default/assets/css/style.css
+
+themes/frontend/default/views/post/auto-post/header.blade.php
+themes/frontend/default/views/post/social-share.blade.php
+
+themes/frontend/default/views/comment/display.blade.php
+
+app/views/emails/post/comment.blade.php
+
+
+-------------------PERFORM THIS ACTION-------------------------------
+
+Go to admincp -> update database
+
+Go to admincp -> configurations -> update Configurations
+
+
+-----------------THANKS FOR USING CREA8SOCIAL--------------------------

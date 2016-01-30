@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# Lets get Laravel 4.2.* running
+
+# Nothing currently happens with the storage folder and it should...
+# it should be sym linked to the data directory
+
+# I read this is a good idea? (should find links)
+unset GIT_DIR;
+
+install_dir=$OPENSHIFT_BUILD_DEPENDENCIES_DIR"laravel"
+
+if [ ! -d "$OPENSHIFT_BUILD_DEPENDENCIES_DIR/laravel" ]; then
+
+  echo "${install_dir}"
+
+  if [ ! -f "$OPENSHIFT_BUILD_DEPENDENCIES_DIR/composer.phar" ]; then
+
+    # Download and *link* the latest version of composer
+    curl -s https://getcomposer.org/installer | php -- --install-dir=$OPENSHIFT_BUILD_DEPENDENCIES_DIR
+    #cd $OPENSHIFT_BUILD_DEPENDENCIES_DIR && composer create-project laravel/laravel --prefer-dist
+
+  else
+    php $OPENSHIFT_BUILD_DEPENDENCIES_DIR/composer.phar self-update	
+  fi
+
+  composer_ver=$($OPENSHIFT_BUILD_DEPENDENCIES_DIR/composer.phar --version)
+
+  echo "${composer_ver}"
+
+  
+  # move into  OPENSHIFT_BUILD_DEPENDENCIES_DIR 
+  cd $OPENSHIFT_BUILD_DEPENDENCIES_DIR
+
+  if [ ! -d "$OPENSHIFT_BUILD_DEPENDENCIES_DIR/laravel" ]; then
+    echo "Installing Laravel..."
+    rm -fr ./laravel
+    $OPENSHIFT_BUILD_DEPENDENCIES_DIR/composer.phar create-project laravel/laravel --prefer-dist
+  else
+    echo "Laravel has been previously installed..."
+  fi
+
+  if [ ! -f "$OPENSHIFT_BUILD_DEPENDENCIES_DIR/build-version.json" ]; then
+    touch $OPENSHIFT_BUILD_DEPENDENCIES_DIR"/build-version.json"
+
+    # Update your bash_profile...
+    echo "alias composer=\$OPENSHIFT_BUILD_DEPENDENCIES_DIR\"composer.phar\"" >> $OPENSHIFT_DATA_DIR"/.bash_profile"
+    echo "alias ls=\"ls -al --color\"" >> $OPENSHIFT_DATA_DIR"/.bash_profile"
+    echo "alias artisan=\"php artisan\"" >> $OPENSHIFT_DATA_DIR"/.bash_profile"
+    
+    echo "Installed \D" >> $OPENSHIFT_BUILD_DEPENDENCIES_DIR"/build-version.json"
+  fi
+  
+else
+  echo "Installed"
+fi

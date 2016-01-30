@@ -1,0 +1,43 @@
+<?php
+return [
+    'pages' => 'Pages',
+    'my-pages' => 'My Pages',
+    'create-page' => 'Create Page',
+    'change-photo-fail' => 'Failed to save photo',
+    'filter-category' => 'Filter by category',
+    'create-a-page' => 'Create a Page',
+    'no-page' => 'There are no pages at this moment',
+    'name' => 'Page Name',
+    'website' => 'Page Website',
+    'short-description' => 'Short Description',
+    'type-of-page' => 'Type of page',
+    'you-may-like' => 'You may like',
+    'change-cover' => 'Change cover',
+    'delete-page' => 'Delete page',
+    'report-page' => 'Report Page',
+    'edit-page' => 'Edit Page',
+    'change-icon' => 'Change Icon',
+    'design-page' => 'Design Page',
+    'page-add-error' => "Failed to create page : May already exist or invalid details",
+    "success" => "Saved successfully",
+    'save-error' => "Error saving changes",
+
+    //Version 2.0
+    'url' => 'Page Url',
+    'moderator-roles' => 'This user can respond to and delete comments on the page',
+    'editor-roles' => 'This user can edit the page, post as the page and moderate posts and comments',
+    'admin-roles' => 'This user can manage all aspect of the page including editing page info, posting as page, moderate posts and comments',
+    'make-you-admin' => 'added you to administrator of ',
+    'make-you-editor' => 'added you to editors of ',
+    'make-you-moderator' => 'added you to moderators of ',
+    'page-roles' => 'Manage page roles',
+    'admin' => 'Admin',
+    'editor' => 'Editor',
+    'moderator' => 'Moderator',
+    'add-new-admin' => 'Add New Admin',
+    'add-admin-input' => 'Type the name of your friends or people who likes this page',
+    'save-admin' => 'Save Admin',
+    'role' => 'Role',
+    'invite-friends-placeholder' => 'Invite your friends to like this page'
+
+];

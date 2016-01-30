@@ -1,0 +1,11 @@
+
+---------------------CHANGES MADE-------------------------------
+
+PLEASE DELETE EVERYTHING AT AT
+
+-themes/admincp/modern/
+
+
+WITH THE NEWLY DOWNLOAD MODERN THEME FILE
+
+

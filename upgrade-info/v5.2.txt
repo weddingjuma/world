@@ -1,0 +1,74 @@
+----------------THINGS DONE-----------
+
+-Fix facebook authentication issue
+-Added confirmation for album deletion
+-Full width photo viewer implemented for proper display of photos
+-Facebook style multiple photos display in posts
+-Improved profile and page cover upload
+-Rebuild option to modify user profile cover to look like facebook
+    -with option to reposition at any time
+    - and remove profile cover to turn back to default cover
+-Rebuild option to modify page cover like user profile cover to with
+    -option to reposition at any time
+    -remove cover to turn back to default
+
+-Page can now make comment on their posts instead of normal user
+
+-----------ADD THIS FILES -----------------
+
+-themes/frontend/default/assets/css/style-v5.2.css
+-themes/frontend/default/assets/js/jquery-ui.js
+
+-----------FILES TO UPDATE OR CHANGE--------
+
+-app/Controllers/SocialauthController.php
+-app/Controllers/ProfileController.php
+-app/Controllers/PageController.php
+
+-app/SetupDatabase/Install.php
+
+-app/Presenters/UserPresenter.php
+-app/Presenters/PagePresenter.php
+
+-app/Repositories/UserRepository.php
+
+-app/lang/en/global.php
+-app/lang/en/user.php
+
+-app/routes/profile.php
+-app/routes/pages.php
+
+-workbench/idocrea8/image/src/Idocrea8/Image/ImageProcessor.php
+-
+-themes/frontend/default/boot.php
+
+-themes/frontend/default/assets/js/script.js
+
+-themes/frontend/default/views/comment/display-page.blade.php
+
+-themes/frontend/default/views/page/profile/layout.blade.php
+-themes/frontend/default/views/photo/display-album.blade.php
+-themes/frontend/default/views/photo/display-photo.blade.php
+
+-themes/frontend/default/views/post/media.blade.php
+
+-themes/frontend/default/views/profile/layout.blade.php
+
+
+----FINAL STEP ---------
+
+-Go to admincp -> Update Database
+
+Please clear your browser cache to see changes
+
+
+
+--------HAVE THE NEW HOMEPAGE DESIGN-----------
+
+-Please this is not required is just for people who want to have the new homepage little design changes should update this file
+
+-themes/frontend/default/assets/css/style.css
+--themes/frontend/default/assets/images/topography3.jpg
+
+
+-------THANKS FOR CHOOSING CREA8SOCIAL----------

@@ -1,0 +1,5 @@
+---------------------------------------
+FILES TO UPDATE
+---------------------------------------
+
+app/Addons/Autotranslator/views/link.blade.php

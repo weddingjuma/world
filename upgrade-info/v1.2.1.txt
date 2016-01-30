@@ -1,0 +1,51 @@
+----------------------WORK DONE---------------------------------------
+
+-Fixed bug when signup through facebook
+-Fixed issue with soundcloud music suggestion
+-Fixed language translation issue
+-Fixed issue in chrome/Others upload of photos  to album
+-Added option for members to set preferred language
+-Fixed issue with change of language with - or _
+-Set post to others timeline to be public
+-Fixed issue with profile album photos showing other people photos under it
+-Added user fullname clickable
+-Also page, community, games name clickable
+
+----------------------FILES TO UPDATE---------------------------------
+
+-app/controllers/SocialauthController.php
+-app/controllers/PostController.php
+-app/controllers/BaseController.php
+-app/controllers/PhotoController.php
+
+-app/providers/AdmincpServiceProvider.php
+
+-app/lang/en/post.php
+-app/lang/en/photo.php
+
+-app/repositories/UserRepository.php
+-app/repositories/PhotoAlbumRepository.php
+
+-app/routes/admincp.php
+
+themes/admincp/default/views/user/list.blade.php
+
+themes/frontend/default/assets/css/style.css
+
+
+themes/frontend/default/views/user/account/index.blade.php
+themes/frontend/default/views/photo/profile/photos.blade.php
+themes/frontend/default/views/profile/index.blade.php
+themes/frontend/default/views/user/display.blade.php
+themes/frontend/default/views/user/popover.blade.php
+themes/frontend/default/views/user/side-info.blade.php
+
+themes/frontend/default/views/post/headers/user.blade.php
+themes/frontend/default/views/post/headers/page.blade.php
+themes/frontend/default/views/post/headers/community.blade.php
+
+themes/frontend/default/views/page/display.blade.php
+themes/frontend/default/views/community/display.blade.php
+themes/frontend/default/views/game/display.blade.php
+
+----------------------FILES/FOLDERS TO ADD---------------------------

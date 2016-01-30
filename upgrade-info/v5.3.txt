@@ -1,0 +1,27 @@
+-----CHANGES MADE------------------
+-Replace Image processing library with PHPImageworkshop for good image processing
+-Now photo orientation on some mobile has been fix (Photo Rotation fixed)
+-Thumbnail creation improved
+-Fix photos cut in post to show fully now
+-Fix issue with deleting shared post, before option to delete hide in post dropdown menu
+-Fix big picture problem from registration made through facebook,google+
+-Reduce photo viewer alot bit from full screen to allow closing when click outside of it
+
+-----FILES OR FOLDER TO ADD---------------------
+
+-workbench/idocrea8/image/src/Idocrea8/Image/library/PHPImageWorkshop/ add all files
+
+-----FILES TO CHANGE OR UPDATE-----
+
+-workbench/idocrea8/image/src/Idocrea8/Image/ImageProcessor.php
+
+-themes/frontend/default/assets/css/style-v5.2.css
+
+-themes/frontend/default/assets/js/script.js
+
+-themes/frontend/default/views/post/headers/community.blade.php
+-themes/frontend/default/views/post/headers/user.blade.php
+
+-themes/frontend/default/views/post/editor/main.blade.php
+
+-----FINAL STEP------------------
